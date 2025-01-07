@@ -1,0 +1,39 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3702F64D-1E61-4AD0-B877-B70EC3F52077}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AtSort</RootNamespace>
+    <AssemblyName>AtSort</AssemblyName>
+    <OutputName>AtSort</OutputName>
+    <Model>Lib</Model>
+    <ApplicationIcon>ATIconDA.ico</ApplicationIcon>
+    <stack_size>16384</stack_size>
+    <CopyCore>True</CopyCore>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+    <warnings>on</warnings>
+    <GenerateMap>True</GenerateMap>
+    <line_numbers>True</line_numbers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>min</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+    <warnings>on</warnings>
+    <GenerateMap>True</GenerateMap>
+    <line_numbers>True</line_numbers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AtSort.clw" />
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
