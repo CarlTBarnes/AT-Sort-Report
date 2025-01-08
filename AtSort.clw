@@ -376,7 +376,7 @@ ALineAfterStripTxt STRING(64)   !
 BegComma    LONG     
 EndParen    LONG 
 PopNo       USHORT
-NotIfSEQ    BOOL    !if #SEQ() then do not strip
+NotIfSEQ    BOOL    !if #SEQ() then do not strip used for #ORIG and #ORIGINAL
 StrippedTooBig LONG !Some Add Text. Unlikely to be a problem, but it could exceed size allowed
     CODE
     PopNo=POPUPunder(BtnFEQ, |
@@ -404,9 +404,9 @@ StrippedTooBig LONG !Some Add Text. Unlikely to be a problem, but it could excee
     CASE PopNo        !123456789012
     OF  1 ; StripTxt = ',#ORIG('        ; NotIfSEQ=True 
     OF  2 ; StripTxt = ',#LINK('
-    OF  3 ; StripTxt = ',#ORDINAL('
-    OF  4 ; StripTxt = ',USE(?STRING'   ; ReplaceCode=''             ; ReplaceHow=3
-    OF  5 ; StripTxt = ',USE(?STRING'   ; ReplaceCode=',USE(?string' ; ReplaceHow=-3
+    OF  3 ; StripTxt = ',#ORDINAL('     ; NotIfSEQ=True
+    OF  4 ; StripTxt = ',USE(?STRING'   ; ReplaceCode=''             ; ReplaceHow = 3
+    OF  5 ; StripTxt = ',USE(?STRING'   ; ReplaceCode=',USE(?string' ; ReplaceHow = -3
     OF  6 ; StripTxt = ',DECIMAL('      ; ReplaceCode=',right'
     OF  7 ; StripTxt = ',TRN'           ; ReplaceCode=',TRN'         ; ReplaceHow=5     !Add TRN to all STRINGs
     OF  8 ; StripTxt = ',TRN'           ; ReplaceCode=''             ; ReplaceHow=6     !Remove TRN
