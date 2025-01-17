@@ -2,7 +2,7 @@
 
 Reports made using the Designer will usually have the controls in a somewhat random order.
  This tool will let you sort them by the Y and X so they are in the order they paint on the Report.
- This makes it easier to understand the code and use the Tab Order Assistant.
+ This makes it easier to understand the code and use the Tab Order Assistant (TOA).
 
 ____
 ##ClarionLive Connect!
@@ -12,7 +12,9 @@ See the AT() Sort tool in use in ClarionLive Connect! - 2025.01.08
 https://youtu.be/JZHDzKR5xfA?t=741
 
 ___
-Click the "Report ..." button to open the Report Code Editor. An example below is typical code with the Controls is somewhat random order:
+Click the "Report ..." button to open the Report Code Editor. An example below is typical code with the Controls is somewhat random order by X,Y position.
+ The order below is the order you'll see in the TOA. The TOA is most useful when controls next to each other on the printed report are next to each other in the TOA.
+ This tool sorts your Controls to make the TOA more useful, it is also the more logical way to read the report code.
 
 ![Report Before](images/rptbefore.png)
 
