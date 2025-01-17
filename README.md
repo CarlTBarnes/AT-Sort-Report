@@ -21,14 +21,16 @@ Click the "Report ..." button to open the Report Code Editor. An example below i
 After using AT Sort to Sort and Clean the code plus Align the AT() and USE() it looks like below. This code is easy to review for issues and consistency.
  Its also the best code for the Tab Order assistant.
 
-You do see a few issues to fix for consistency.
+![Report After](images/rptafter.png)
+
+Above you do see a few issues to fix for consistency.
  The `STRING('HOURS')` is `AT(,308)` and `STRING('R')` is `AT(,313)` while the other strings are `AT(,323)`.
  At the bottom are strings `AT(,444)` and `AT(,448)` that should all be the same. 
  These Y values nudged to be slightly different may make the report look bad and did not sort correctly. You should fix them and run throught AT Sort again.
 
-![Report After](images/rptafter.png)
+____
 
-To do this paste the controls from one Detail into the "Original Code" tab then click Sort by AT:
+To use AT Sort to fix the report code as shown above first copy / paste the Controls from One Detail into the "Original Code" tab then click Sort by AT:
 
 ![AT Sort Orig](images/atsort1.png)
 
