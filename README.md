@@ -18,7 +18,13 @@ Click the "Report ..." button to open the Report Code Editor. An example below i
 
 ![Report Before](images/rptbefore.png)
 
-After using AT Sort to Sort and Clean the code plus Align the AT() and USE() it looks like below. This code is easy to review for issues and consistency. Its also the best code for the Tab Order assistant.
+After using AT Sort to Sort and Clean the code plus Align the AT() and USE() it looks like below. This code is easy to review for issues and consistency.
+ Its also the best code for the Tab Order assistant.
+
+You do see a few issues to fix for consistency.
+ The `STRING('HOURS')` is `AT(,308)` and `STRING('R')` is `AT(,313)` while the other strings are `AT(,323)`.
+ At the bottom are strings `AT(,444)` and `AT(,448)` that should all be the same. 
+ These Y values nudged to be slightly different may make the report look bad and did not sort correctly. You should fix them and run throught AT Sort again.
 
 ![Report After](images/rptafter.png)
 
@@ -30,8 +36,9 @@ The "AT() Sorted" tabs shows with the Report sorted by AT Y then X:
 
 ![AT Sorted](images/atsort2.png)
 
-Next click the "Align AT()" button to make it easy to see the modifiers of the controls that appear after the AT() and USE(). Use the "Clean..." button to remove clutter like #ORIG().
- On a Report you can usually remove #ORIGINAL() as that is used to tie to Embeds and Actions, to play it be safe leave them.
+Next click the "Align AT()" button to make it easy to see the modifiers of the controls that appear after the `AT()` and `USE()`.
+ Use the "Clean..." button to remove clutter like `#ORIG()`.
+ On a Report you can usually remove `#ORIGINAL()` as that is used to tie to Embeds and Actions, to play it be safe leave them.
 
 ![AT Clean](images/atsort3.png)
 
